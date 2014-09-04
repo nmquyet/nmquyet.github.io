@@ -289,7 +289,6 @@ div.ui-input-text input.ui-input-text, div.ui-input-text textarea.ui-input-text,
 	text-shadow: none;
 }
 #footer {
-	height:45px;
 	background:#fff url(images/bg_ft.jpg) top repeat-x;
 	padding-top:10px;
 }
@@ -306,7 +305,6 @@ div.ui-input-text input.ui-input-text, div.ui-input-text textarea.ui-input-text,
 	display: block;
     float: left;
     width: 22%;
-    height: 45px;
     font-size: 14px;
     padding: 13px 0px 10px 33px;
     color: #5E5E5E;
@@ -324,7 +322,6 @@ div.ui-input-text input.ui-input-text, div.ui-input-text textarea.ui-input-text,
 	display: block;
     float: left;
     width: 22%;
-    height: 45px;
     font-size: 14px;
     padding: 13px 0px 10px 35px;
 	text-align:center;
@@ -342,7 +339,6 @@ div.ui-input-text input.ui-input-text, div.ui-input-text textarea.ui-input-text,
 	display: block;
     float: left;
     width: 22%;
-    height: 45px;
     font-size: 14px;
     padding: 13px 0px 10px 35px;
 	text-align:left;
