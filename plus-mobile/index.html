@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <title></title>
+
+<script type='text/javascript' src='jquery-1.8.3.min.js'></script>
+
+<script>
+$(document).ready(function() {
+	// sample 4			
+		function toggleSlides(){
+			$('.toggler').click(function(e){
+				var id=$(this).attr('id');
+				var widgetId=id.substring(id.indexOf('-')+1,id.length);
+				$('#'+widgetId).slideToggle();
+				$(this).toggleClass('sliderExpanded');
+				$('.closeSlider').click(function(){
+						$(this).parent().hide('slow');
+						var relatedToggler='toggler-'+$(this).parent().attr('id');
+						$('#'+relatedToggler).removeClass('sliderExpanded');
+				});
+			});
+		};
+		$(function(){
+			toggleSlides();
+		});
+		
+		
+			// slide toogle sample 2
+		$('.open-expand').click(function(){
+		$('.expand-search').slideToggle('fast');
+		$(this).toggleClass('active');
+		return false;
+	});
+	$('#close-expand').click(function(){
+		$('.expand-search').slideToggle('fast');
+		$('.open-expand').toggleClass('active');
+		return false;
+	});
+	
+		// sample 3
+		$("#expanderHead").click(function(){
+		$("#expanderContent").slideToggle();
+		if ($("#expanderSign").text() == ""){
+			$("#expanderSign").html("-")
+		}
+		else {
+			$("#expanderSign").text("-")
+		}
+	});
+	
+	
+	// sample 1
+		$('#mySlideContent').css('display','none');
+		$('#mySlideToggler').click(function(){
+			$('#mySlideContent').slideToggle('slow');
+			$(this).toggleClass('slideSign');
+			return false;
+		});
+	
+		
+});
+</script>  
+
+  <link rel="stylesheet" href="jquery.mobile-1.3.1.min.css">
+  <!-- Extra Codiqa features -->
+  <link rel="stylesheet" href="codiqa.ext.css">
+   <!-- jQuery and jQuery Mobile -->
+  <script src="jquery-1.9.1.min.js"></script>
+  <script src="jquery.mobile-1.3.1.min.js"></script>
+  <!-- Extra Codiqa features -->
+  <script  src="codiqa.ext.js"></script>
+   
+</head>
+<body>
+<!-- Home -->
+
+<div data-role="page" id="home" data-theme="b">
+	<div id="link" onclick='location.href="index.html"'></div>
+    <div data-role="panel" id="navpanel" data-theme="a"
+         data-display="overlay" data-position="right">
+        <div data-role="controlgroup" data-corners="false">
+            <a href="napdt.html" class="dtdd" >Nạp tiền điện thoại</a>
+            <a href="doithedt.html" class="thedt" >Đổi thẻ cào điện thoại</a>
+            <a href="zingcard.html" class="zingcard" >Đổi thẻ Zingcard</a>
+            <a href="voucher.html" class="khuyenmai" >Voucher</a>
+            <a href="#" class="wheel" >Quay số</a>
+            <a href="#" class="sukien" >Sự kiện</a>
+            <a href="#" class="plus" >Tích điểm</a>
+            <a href="account.html" class="user" >Thông tin cá nhân</a>
+            <a href="#" class="exit" >Thoát</a>
+        </div>
+    </div>
+
+    <div id="header" data-role="header" data-theme="b">
+        <a id="list" class="ui-btn-right" href="#navpanel">&nbsp;</a>
+    </div>
+    
+    
+<div data-role="content">
+
+ 	<div class="banner"></div>
+    <div class="promote"><img src="images/icon_hot.png" width="43" height="20"> Quay số tháng 08 trúng ngay XBOX 360 Slim 250GB Kinect Jtag...</div>
+    
+    <div id="tab_img" class="ui-grid-b tab_img">
+            <div class="ui-block-a">
+            <div  class="napdt" ><a href="napdt.html">Nạp tiền điện thoại</a></div>
+            </div>
+            <div class="ui-block-b">
+            <div  class="carddt" ><a href="doithedt.html">Đổi thẻ điện thoại</a></div>
+            </div>
+       </div>
+        <div id="tab_img" class="ui-grid-b tab_img">
+            <div class="ui-block-a">
+            <div  class="zing" ><a href="#">Nạp thẻ ZING</a></div>
+            </div>
+            <div class="ui-block-b">
+            <div  class="voucher" ><a href="voucher.html">Voucher</a></div>
+            </div>
+       </div>
+       
+       
+        <div id="footer" data-theme="" data-role="footer" data-position="fixed" class="footer">
+    <div class="quayso"> Quay số</div> <div class="event"> Sự kiện</div> <div class="account"> Tài khoản</div>
+           
+  </div>
+</div>
+<!--><div data-role="page" id="page1">
+    <div id="header" data-theme="e" data-role="header" class="header" >
+        <div  id="logo"></div>
+        <div id="list"></div>
+        <div class="pane"></div>        
+</div><!-->
+
+  
+
+    
+
+   
+   
+</div>
+</body>
+</html>
